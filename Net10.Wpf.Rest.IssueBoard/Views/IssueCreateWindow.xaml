@@ -1,0 +1,35 @@
+<Window x:Class="Net10.Wpf.Rest.IssueBoard.Views.IssueCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CreateIssue" Height="500" Width="700"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <TextBlock Text="AuthorName *" FontWeight="Bold" Margin="0,5"/>
+                <TextBox x:Name="AuthorNameTextBox" MaxLength="50"/>
+
+                <TextBlock Text="Category" FontWeight="Bold" Margin="0,10,0,5"/>
+                <TextBox x:Name="CategoryTextBox" MaxLength="30"/>
+
+                <TextBlock Text="Title *" FontWeight="Bold" Margin="0,10,0,5"/>
+                <TextBox x:Name="TitleTextBox" MaxLength="100"/>
+
+                <TextBlock Text="Description *" FontWeight="Bold" Margin="0,10,0,5"/>
+                <TextBox x:Name="DescriptionTextBox" TextWrapping="Wrap" AcceptsReturn="True" 
+                         MaxLength="2000" Height="200" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Create" Width="100" Height="30" Margin="5" Click="CreateButton_Click"/>
+            <Button Content="Back" Width="100" Height="30" Margin="5" Click="BackButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

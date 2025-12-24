@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="Api.Rest.IssueBoard/Api.Rest.IssueBoard.csproj">
+    <BuildDependency Project="Shared.Rest.IssueBoard/Shared.Rest.IssueBoard.csproj" />
+  </Project>
+  <Project Path="Net10.Wpf.Rest.IssueBoard/Net10.Wpf.Rest.IssueBoard.csproj">
+    <BuildDependency Project="Shared.Rest.IssueBoard/Shared.Rest.IssueBoard.csproj" />
+  </Project>
+  <Project Path="Shared.Rest.IssueBoard/Shared.Rest.IssueBoard.csproj" />
+</Solution>
